@@ -1,55 +1,42 @@
-#ifndef CAPP_H
-#define CAPP_H
+//==============================================================================
+// SDL Tutorial 1
+//==============================================================================
+#ifndef _CAPP_H_
+    #define _CAPP_H_
 
 #include <SDL/SDL.h>
-#include <stdio.h>
+
 #include "CEvent.h"
 #include "CSurface.h"
 
+//==============================================================================
 class CApp : public CEvent {
-	private:
-	bool Running;
-	SDL_Surface* Surf_Display;
+    private:
+        bool            Running;
 
-	private:
-	SDL_Surface* Surf_Grid;
-	SDL_Surface* Surf_X;
-	SDL_Surface* Surf_O;
+        SDL_Surface*    Surf_Display;
 
-	private:
-	int Grid[9];
+        SDL_Surface*	Surf_Test;
 
-	private:
-	int WinsX;
-	int WinsO;
+    public:
+        CApp();
 
-	enum
-	{
-	  GRID_TYPE_NONE = 0,
-	  GRID_TYPE_X,
-	  GRID_TYPE_O
-	};
-	
-	int CurrentPlayer;
+        int OnExecute();
 
-	public:
-	CApp();
-	int OnExecute();
+    public:
+        bool OnInit();
 
-	public:
-	bool OnInit();
-	void OnEvent(SDL_Event* Event);
-	void OnLButtonDown(int mX, int mY);
-	void OnRButtonDown(int mX, int mY);
-	void OnExit();
-	void OnLoop();
-	void OnRender();
-	void OnCleanup();
+        void OnEvent(SDL_Event* Event);
 
-	public:
-	void Reset();
-	void SetCell(int ID, int Type);
-	void SetWinner();
-	void CongratWinner(int);
+            void OnExit();
+
+        void OnLoop();
+
+        void OnRender();
+
+        void OnCleanup();
 };
+
+//==============================================================================
+
 #endif

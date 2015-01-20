@@ -35,7 +35,7 @@ TARFILE = $(MAIN).tar
 .PHONY: depend clean
 
 all:    $(MAIN)
-	@echo Tutorial: www.sdltutorials.com/sdl-tutorial-tic-tac-toe
+	@echo Tutorial: www.sdltutorials.com/sdl-animation
 
 $(MAIN): $(OBJS) 
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)

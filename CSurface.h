@@ -1,19 +1,24 @@
-#ifndef CSURFACE_H
-#define CSURFACE_H
+//==============================================================================
+// Surface functions
+//==============================================================================
+#ifndef _CSURFACE_H_
+    #define _CSURFACE_H_
 
 #include <SDL/SDL.h>
 
-class CSurface 
-{
+//==============================================================================
+class CSurface {
 	public:
-	CSurface();
+		CSurface();
 
 	public:
-	static SDL_Surface* OnLoad(char* File);
+		static SDL_Surface* OnLoad(char* File);
 
-	static bool OnDraw(SDL_Surface* Surf_Dest, SDL_Surface* Surf_Src, int X, int Y);
-	static bool OnDraw(SDL_Surface* Surf_Dest, SDL_Surface* Surf_Src, int X, int Y, int X2, int Y2, int W, int H);
-	static bool Transparent(SDL_Surface* Surf_Dest, int R, int G, int B);
+		static bool OnDraw(SDL_Surface* Surf_Dest, SDL_Surface* Surf_Src, int X, int Y);
+
+		static bool OnDraw(SDL_Surface* Surf_Dest, SDL_Surface* Surf_Src, int X, int Y, int X2, int Y2, int W, int H);
 };
+
+//==============================================================================
 
 #endif
