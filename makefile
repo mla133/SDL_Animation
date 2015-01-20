@@ -1,5 +1,5 @@
 # define the C source files
-SRCS = CApp.cpp CApp_OnInit.cpp CApp_OnEvent.cpp CApp_OnLoop.cpp CApp_OnRender.cpp CApp_OnCleanup.cpp CSurface.cpp CEvent.cpp
+SRCS = CApp.cpp CApp_OnInit.cpp CApp_OnEvent.cpp CApp_OnLoop.cpp CApp_OnRender.cpp CApp_OnCleanup.cpp CSurface.cpp CEvent.cpp CAnimation.cpp
 
 # define the C compiler to use
 CC = g++

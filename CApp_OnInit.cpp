@@ -11,9 +11,18 @@ bool CApp::OnInit() {
         return false;
     }
 
-	if((Surf_Test = CSurface::OnLoad("gfx/yoshi.bmp")) == NULL) {
+	if((Surf_Test = CSurface::OnLoad("gfx/myimage.bmp")) == NULL) {
 		return false;
 	}
+
+	if((Surf_BG = CSurface::OnLoad("gfx/bg.bmp")) == NULL) {
+		return false;
+	}
+
+	CSurface::Transparent(Surf_Test, 255, 0, 255);
+
+	Anim_Yoshi.MaxFrames = 8;
+	//Anim_Yoshi.Oscillate = true;
 
     return true;
 }

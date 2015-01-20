@@ -6,6 +6,7 @@
 
 #include <SDL/SDL.h>
 
+#include "CAnimation.h"
 #include "CEvent.h"
 #include "CSurface.h"
 
@@ -17,6 +18,10 @@ class CApp : public CEvent {
         SDL_Surface*    Surf_Display;
 
         SDL_Surface*	Surf_Test;
+
+        SDL_Surface*    Surf_BG;
+
+        CAnimation      Anim_Yoshi;
 
     public:
         CApp();
